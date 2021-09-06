@@ -7,9 +7,8 @@ import (
 )
 
 func main() {
-	out, err := exec.Command("/bin/bash", "deployment.sh").Output()
+	out, err := exec.Command("/bin/bash", "/opt/adamo/deployment/bin/deployment.sh").Output()
 	if err != nil {
-		fmt.Println("in err")
 		log.Fatal(err)
 	}
 	fmt.Println(string(out))
